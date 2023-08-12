@@ -16,12 +16,12 @@ fn main() {
     // Convert operation input to a char
     let selected_operation: char = operation_input.to_uppercase().chars().next().unwrap();
 
-    // Get first character of input String (cut off the newline character) and then parse it. Match the Result to ensure a valid number is provided
-    let num1: i32 = match String::from(input1.chars().next().unwrap()).parse() {
+    // Remove whitespace from input (cut off the newline character), coerce it back to String and then parse it. Match the Result to ensure a valid number is provided
+    let num1: i32 = match String::from(input1.trim()).parse() {
         Ok(num) => num,
         Err(error) => panic!("Failed to parse {input1}. {error}")
     };
-    let num2: i32 = match String::from(input2.chars().next().unwrap()).parse() {
+    let num2: i32 = match String::from(input2.trim()).parse() {
         Ok(num) => num,
         Err(error) => panic!("Failed to parse {input2}. {error}")
     };
