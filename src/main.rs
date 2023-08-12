@@ -28,6 +28,9 @@ fn main() {
 
     match selected_operation {
         'A' => add(num1, num2),
+        'S' => subtract(num1, num2),
+        'M' => multiply(num1, num2),
+        'D' => divide(num1, num2),
         _ => println!("Not a valid option")
     }
 }
@@ -35,4 +38,19 @@ fn main() {
 fn add (x: i32, y: i32) {
     let result = x + y;
     println!("{x} + {y} = {result}");
+}
+
+fn subtract (x: i32, y: i32) {
+    let result = x - y;
+    println!("{x} - {y} = {result}");
+}
+
+fn multiply (x: i32, y: i32) {
+    let result = x * y;
+    println!("{x} x {y} = {result}");
+}
+
+fn divide (x: i32, y: i32) {
+    let result = x / y;
+    println!("{x} / {y} = {result}");
 }
